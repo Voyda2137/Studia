@@ -1,5 +1,9 @@
 import cv2 as cv
 import numpy as np
+
+path = "C:\\Users\\wojda\\OneDrive\\Dokumenty\\GitHub\\skryptowe_jezyki_LAB\\przetwarzanie_obrazow\\LAB1"
+cv.samples.addSamplesDataSearchPath(path)
+
 img1 = cv.imread(cv.samples.findFile('pudzian.jpg'))
 img2 = cv.imread(cv.samples.findFile('pudzian.jpg'))
 img1 = cv.flip(img1, 0) #odbicie w pionie

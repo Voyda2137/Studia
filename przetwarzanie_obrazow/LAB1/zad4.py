@@ -1,5 +1,8 @@
 import cv2 as cv
 
+path = "C:\\Users\\wojda\\OneDrive\\Dokumenty\\GitHub\\skryptowe_jezyki_LAB\\przetwarzanie_obrazow\\LAB1"
+cv.samples.addSamplesDataSearchPath(path)
+
 jpg = cv.imread(cv.samples.findFile('pudzian.jpg'))
 png = cv.imread(cv.samples.findFile('png.png'))
 bmp = cv.imread(cv.samples.findFile('bmp.bmp'))
