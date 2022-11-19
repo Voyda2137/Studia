@@ -1,5 +1,4 @@
 from enum import Enum
-
 class Car:
     def __init__(self, model=str(), color=str(), hp=int(), condition='new' ):
         self.model = model
