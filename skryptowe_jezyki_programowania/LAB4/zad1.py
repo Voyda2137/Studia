@@ -1,16 +1,18 @@
 import math
-pi = 3.14
+
+
 class circle:
     def __init__(self, numer=0, nazwa="", a=0, b=0, r=0):
         self.numer = numer
         self.nazwa = nazwa
         self.a = a
         self.b = b
-        self.r = r               
+        self.r = r
 
-circle1 = circle(1,'Kolo',3,3,3)
-circle2 = circle(2,'Kolo',5,7,10)
-circle3 = circle(3,'Kolo',10,10,3)
+
+circle1 = circle(1, 'Kolo', 3, 3, 3)
+circle2 = circle(2, 'Kolo', 5, 7, 10)
+circle3 = circle(3, 'Kolo', 10, 10, 3)
 
 x = int(input('Podaj x: '))
 y = int(input('Podaj y: '))
@@ -21,4 +23,3 @@ if warunek1 or warunek2 or warunek3:
     print('Punkt znajduje się w kole')
 else:
     print('Punkt nie znajduje się w kole')
-
