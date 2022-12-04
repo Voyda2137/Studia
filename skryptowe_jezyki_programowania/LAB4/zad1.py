@@ -6,44 +6,19 @@ class circle:
         self.nazwa = nazwa
         self.a = a
         self.b = b
-        self.r = r
-        self.positions = []
-    def createCircle(self):
-        stepSize = 0.5
-        positions = self.positions
-        t = 0
-        while t < 2 * pi:
-            number = (round(self.r * math.cos(t) + self.a, 1), round(self.r * math.sin(t) + self.b, 1)) # zaokrąglenie do 1 miejsca po przecinku
-            positions.append(number)
-            t += stepSize
-
-            
-
+        self.r = r               
 
 circle1 = circle(1,'Kolo',3,3,3)
-circle1.createCircle()
 circle2 = circle(2,'Kolo',5,7,10)
-circle2.createCircle()
 circle3 = circle(3,'Kolo',10,10,3)
-circle3.createCircle()
-print(circle1.positions)
-print('kolo2')
-print(circle2.positions)
-print('kolo3')
-print(circle3.positions)
-print('Podaj Wspolrzedna x:')
-x = float(input())
-print('Podaj wspolrzedna y')
-y = float(input())
-if (x, y) in circle1.positions:
-    print('wspolrzedne znajduja sie w kole ', circle1.nazwa, circle1.numer)
+
+x = int(input('Podaj x: '))
+y = int(input('Podaj y: '))
+warunek1 = pow(x - circle1.a, 2) + pow(y - circle1.b, 2) < pow(circle1.r, 2)
+warunek2 = pow(x - circle2.a, 2) + pow(y - circle2.b, 2) < pow(circle2.r, 2)
+warunek3 = pow(x - circle3.a, 2) + pow(y - circle3.b, 2) < pow(circle3.r, 2)
+if warunek1 or warunek2 or warunek3:
+    print('Punkt znajduje się w kole')
 else:
-    print('wspolrzedne nie znajduja sie w kole ',circle1.nazwa, circle1.numer)
-if (x, y) in circle2.positions:
-    print('wspolrzedne znajduja sie w kole ', circle2.nazwa, circle2.numer)
-else:
-    print('wspolrzedne nie znajduja sie w kole ', circle2.nazwa, circle2.numer)
-if (x, y) in circle3.positions:
-    print('wspolrzedne znajduja sie w kole ', circle3.nazwa, circle3.numer)
-else:
-    print('wspolrzedne nie znajduja sie w kole ', circle3.nazwa, circle3.numer)
+    print('Punkt nie znajduje się w kole')
+
