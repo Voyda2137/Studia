@@ -22,7 +22,7 @@ def loginValidation(log):
 
 def pwdValidation(password):
     pwdRegex = re.compile(
-        r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$')
+        r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
     if re.fullmatch(pwdRegex, password):
         print('Poprawne hasło')
     else:
@@ -33,8 +33,8 @@ def pwdValidation(password):
 login = input('Podaj login: ')
 loginValidation(login)
 
-pwd = input('Podaj hasło')
-loginValidation(pwd)
+pwd = input('Podaj hasło: ')
+pwdValidation(pwd)
 
 email = input('Podaj email: ')
 emailValidation(email)

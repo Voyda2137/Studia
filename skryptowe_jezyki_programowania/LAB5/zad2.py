@@ -24,3 +24,5 @@ re.sub(ammRegex, '.........', txt)
 # wykrycie wszystkich znaków dopóki nie zostanie napotkany newline
 newlineRegex = re.compile(r".*")
 newline = re.findall(newlineRegex, txt)
+for i in range(len(newline)):
+    print(newline[i])
